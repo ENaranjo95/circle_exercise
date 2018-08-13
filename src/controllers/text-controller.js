@@ -1,5 +1,8 @@
 "use strict";
+const pixel = require("../services/text-service")
+//console.log(pixel.pixelate)
 
 exports.pixelate = (req, res) => {
-  return res.sendStatus(501);
+  return res.send(pixel.pixelate(req.body.text))
+  //return res.sendStatus(200)
 };

@@ -2,7 +2,7 @@
 
 const bodyParser = require("body-parser");
 const express = require("express");
-const controllers = require("./controllers");
+const controllers = require("./controllers/index.js");
 const path = require("path");
 const port = process.env.PORT || 8080;
 

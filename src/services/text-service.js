@@ -25,8 +25,10 @@ exports.pixelate = (text) => {
   for(let i = 0; i < word.length; i++){
     let letter = word.charAt(i)
     for(let j = 0; j < pixelFont[letter].length; j++){
-      //console.log(pixelFont[letter][j])
-      work.push(pixelFont[letter][j])
+      let code = pixelFont[letter][j]
+      let line = code.replace(/1/gi, '#')
+      let final = line.replace(/0/gi, ' ')
+      work.push(final)
     }
   }
   return work; // TODO: Map text to pixel font.

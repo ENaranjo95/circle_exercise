@@ -20,16 +20,17 @@ const pixelFont = require("../lib/pixel-font.js");
  */
 
 exports.pixelate = (text) => {
-  let word = text.toUpperCase()
   let work = []
-  for(let i = 0; i < word.length; i++){
-    let letter = word.charAt(i)
-    for(let j = 0; j < pixelFont[letter].length; j++){
-      let code = pixelFont[letter][j]
+  let word = text.toUpperCase()
+  let fix = word.split('')
+  console.log(`Passing in array ${fix}`)
+  fix.forEach( (el) => { el == ' ' ?  el = 'space' : el
+    for(let j = 0; j < pixelFont[el].length; j++){
+      let code = pixelFont[el][j]
       let line = code.replace(/1/gi, '#')
       let final = line.replace(/0/gi, ' ')
       work.push(final)
     }
-  }
+  })
   return work; // TODO: Map text to pixel font.
-};
+}

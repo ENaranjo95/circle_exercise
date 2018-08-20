@@ -9,7 +9,7 @@ This challenge uses module pattern coding and to complete exercise requires an u
 
 ## Optimization
 
-Writing dry code and probably a optimizating way to build a better pixelate function. Also how to append to the DOM with less HTML tags.
+Optimizating a better `pixelate()` function. Also how to append to the DOM with less HTML tags.
 
 ## Lesson Learned
 

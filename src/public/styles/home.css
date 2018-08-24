@@ -1,13 +1,12 @@
-#results div{
+/* #results div{
   height: 100px;
   width: 50px;
   display: inline-block;
   text-align: center;
-}
-
-/* #results > p{
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  display: inline-block;
-  width: 50px;
 } */
+
+#results {
+  word-wrap: break-all;
+  white-space: pre-wrap;
+  height: 100px;
+}

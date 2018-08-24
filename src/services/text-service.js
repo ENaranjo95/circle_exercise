@@ -42,11 +42,12 @@ exports.pixelate = (text) => {
     letters.push(pixelFont[char] || pixelFont['space'])
   }
   const final = []
-  for(let y = 0; y < letters.length; y++){
-    for(let x = 0; x < letters[y].length; x++){
-      const code = letters[y][x].replace(/1/gi, '#').replace(/0/gi, ' ')
-      final.push(code)
+  for(let y = 0; y < 5; y++){
+    for(let x = 0; x < letters.length; x++){
+      const code = letters[x][y].replace(/1/gi, '#').replace(/0/gi, ' ')
+      final.push(`${code} `)
     }
+    final.push('\n')
   }
-  return final
+  return final.join('')
 }

@@ -10,12 +10,9 @@ submit.addEventListener('click', (event) => {
     'text': text
   })
   .then((response) => {
-    console.log(response.data)
-    let pixel = response.data
-    let parent = document.getElementById('results');
-    if( pixel === 'Words Must Only Include Letters!'){
-      return parent.append(pixel)
-    }
+    console.log(response)
+    const pixel = response.data
+    const parent = document.getElementById('results');
     parent.append(pixel)
   }).catch(function (error) {
     console.log(error);

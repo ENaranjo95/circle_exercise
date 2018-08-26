@@ -1,6 +1,7 @@
 "use strict";
-const pixel = require("../services/text-valid")
+const valid = require("../services/text-valid")
 
 exports.pixelate = (req, res) => {
-  return res.send(pixel.validCharacters(req.body.text));
+  const text = req.body.text
+  return res.send(valid.validChar(req.body.text));
 };

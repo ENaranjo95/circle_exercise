@@ -18,7 +18,7 @@ exports.validChar = (text) => {
   let invalid = "`~!@#$%^&*()-_=+{[]}|'\';:,./<>?1234567890"
   for(let i = 0; i < invalid.length; i++){
     if( text.includes(invalid[i]) ){
-      return 'Words Must Only Include Letters!'
+      return error
     }
   }
   return pixel.pixelate(text)

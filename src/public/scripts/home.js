@@ -15,6 +15,7 @@ submit.addEventListener('click', (event) => {
     const parent = document.getElementById('results');
     parent.append(pixel)
   }).catch(function (error) {
+    parent.append(error)
     console.log(error);
   });
 })
